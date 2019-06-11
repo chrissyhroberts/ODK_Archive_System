@@ -1915,3 +1915,1078 @@ java.lang.IllegalArgumentException: The end date can't be before the start date
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
 	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:17:12,695 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:17:12,711 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:17:12,857 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_14486733508597352982_form.xml
+2019-06-11 16:17:12,858 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a
+2019-06-11 16:17:12,926 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.887 ms
+2019-06-11 16:17:12,927 [main] INFO  XFormParser - Consolidating text finished in 1.149 ms
+2019-06-11 16:17:12,928 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:17:12,928 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:17:12,952 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 23.990 ms
+2019-06-11 16:17:12,954 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.550 ms
+2019-06-11 16:17:12,954 [main] INFO  XFormParser - Consolidating text finished in 0.205 ms
+2019-06-11 16:17:12,955 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:17:12,955 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:17:12,958 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 3.034 ms
+2019-06-11 16:17:13,322 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:17:13,325 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:17:13,383 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Eggs47a
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:62)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.pullFormFromAggregate(PullFormFromAggregate.java:106)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.lambda$static$0(PullFormFromAggregate.java:56)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+Caused by: org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Eggs47a
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:59)
+	... 11 common frames omitted
+2019-06-11 16:17:16,161 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:17:19,605 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:17:19,620 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:17:19,739 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_383991533895326141_form.xml
+2019-06-11 16:17:19,739 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat
+2019-06-11 16:17:19,804 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.797 ms
+2019-06-11 16:17:19,806 [main] INFO  XFormParser - Consolidating text finished in 1.059 ms
+2019-06-11 16:17:19,806 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:17:19,806 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:17:19,867 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 60.540 ms
+2019-06-11 16:17:19,869 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.463 ms
+2019-06-11 16:17:19,869 [main] INFO  XFormParser - Consolidating text finished in 0.109 ms
+2019-06-11 16:17:19,869 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:17:19,869 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:17:19,871 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.034 ms
+2019-06-11 16:17:20,340 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:17:20,342 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:17:20,388 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Dateformat
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:62)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.pullFormFromAggregate(PullFormFromAggregate.java:106)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.lambda$static$0(PullFormFromAggregate.java:56)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+Caused by: org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Dateformat
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:59)
+	... 11 common frames omitted
+2019-06-11 16:17:23,020 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:17:45,169 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:17:45,183 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:17:45,343 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_11817292750757292064_form.xml
+2019-06-11 16:17:45,343 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a
+2019-06-11 16:17:45,406 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.854 ms
+2019-06-11 16:17:45,407 [main] INFO  XFormParser - Consolidating text finished in 0.931 ms
+2019-06-11 16:17:45,407 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:17:45,407 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:17:45,425 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 17.565 ms
+2019-06-11 16:17:45,427 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.569 ms
+2019-06-11 16:17:45,428 [main] INFO  XFormParser - Consolidating text finished in 0.205 ms
+2019-06-11 16:17:45,428 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:17:45,428 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:17:45,431 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.938 ms
+2019-06-11 16:17:45,827 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:17:45,829 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:17:45,875 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Eggs47a
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:62)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.pullFormFromAggregate(PullFormFromAggregate.java:106)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.lambda$static$0(PullFormFromAggregate.java:56)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+Caused by: org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Eggs47a
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:59)
+	... 11 common frames omitted
+2019-06-11 16:17:48,186 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:17:51,539 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:17:51,554 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:17:51,707 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_11423989410744665637_form.xml
+2019-06-11 16:17:51,707 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat
+2019-06-11 16:17:51,759 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.598 ms
+2019-06-11 16:17:51,760 [main] INFO  XFormParser - Consolidating text finished in 0.776 ms
+2019-06-11 16:17:51,760 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:17:51,761 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:17:51,811 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 50.398 ms
+2019-06-11 16:17:51,813 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.420 ms
+2019-06-11 16:17:51,813 [main] INFO  XFormParser - Consolidating text finished in 0.098 ms
+2019-06-11 16:17:51,813 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:17:51,813 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:17:51,815 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.090 ms
+2019-06-11 16:17:52,166 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:17:52,169 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:17:52,224 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Dateformat
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:62)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.pullFormFromAggregate(PullFormFromAggregate.java:106)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.lambda$static$0(PullFormFromAggregate.java:56)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+Caused by: org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Dateformat
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:59)
+	... 11 common frames omitted
+2019-06-11 16:17:54,864 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:19:07,965 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:07,983 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:08,139 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_4411261228609443263_form.xml
+2019-06-11 16:19:08,139 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a
+2019-06-11 16:19:08,205 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 1.054 ms
+2019-06-11 16:19:08,207 [main] INFO  XFormParser - Consolidating text finished in 1.025 ms
+2019-06-11 16:19:08,207 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:08,207 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:19:08,233 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 25.522 ms
+2019-06-11 16:19:08,236 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.885 ms
+2019-06-11 16:19:08,237 [main] INFO  XFormParser - Consolidating text finished in 0.310 ms
+2019-06-11 16:19:08,237 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:08,237 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:19:08,242 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 4.246 ms
+2019-06-11 16:19:08,731 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E1970-01-01T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:08,735 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E1970-01-01T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:08,785 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Eggs47a
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:62)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.pullFormFromAggregate(PullFormFromAggregate.java:106)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.lambda$static$0(PullFormFromAggregate.java:56)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+Caused by: org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Eggs47a
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:59)
+	... 11 common frames omitted
+2019-06-11 16:19:11,807 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 5.721 ms
+2019-06-11 16:19:11,811 [main] INFO  XFormParser - Consolidating text finished in 1.184 ms
+2019-06-11 16:19:11,811 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:11,811 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:19:11,831 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 20.199 ms
+2019-06-11 16:19:11,909 [main] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:00.056692266
+2019-06-11 16:19:15,920 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:15,935 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:16,069 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_5683536731239667173_form.xml
+2019-06-11 16:19:16,069 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat
+2019-06-11 16:19:16,155 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.744 ms
+2019-06-11 16:19:16,156 [main] INFO  XFormParser - Consolidating text finished in 0.943 ms
+2019-06-11 16:19:16,157 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:16,157 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:19:16,220 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 63.512 ms
+2019-06-11 16:19:16,223 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.559 ms
+2019-06-11 16:19:16,223 [main] INFO  XFormParser - Consolidating text finished in 0.108 ms
+2019-06-11 16:19:16,223 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:16,223 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:19:16,226 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.855 ms
+2019-06-11 16:19:16,712 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E1970-01-01T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:16,715 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E1970-01-01T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:16,773 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Dateformat
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:62)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.pullFormFromAggregate(PullFormFromAggregate.java:106)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.lambda$static$0(PullFormFromAggregate.java:56)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+Caused by: org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Dateformat
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:59)
+	... 11 common frames omitted
+2019-06-11 16:19:19,687 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 5.575 ms
+2019-06-11 16:19:19,692 [main] INFO  XFormParser - Consolidating text finished in 1.031 ms
+2019-06-11 16:19:19,692 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:19,692 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:19:19,761 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 68.986 ms
+2019-06-11 16:19:19,830 [main] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:00.053095338
+2019-06-11 16:19:31,974 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:31,996 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:32,152 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_5842206373279091070_form.xml
+2019-06-11 16:19:32,152 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a
+2019-06-11 16:19:32,219 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.947 ms
+2019-06-11 16:19:32,220 [main] INFO  XFormParser - Consolidating text finished in 1.352 ms
+2019-06-11 16:19:32,221 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:32,221 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:19:32,241 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 19.792 ms
+2019-06-11 16:19:32,243 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.574 ms
+2019-06-11 16:19:32,243 [main] INFO  XFormParser - Consolidating text finished in 0.209 ms
+2019-06-11 16:19:32,243 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:32,243 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:19:32,247 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 3.273 ms
+2019-06-11 16:19:32,682 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:32,684 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:32,731 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Eggs47a
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:62)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.pullFormFromAggregate(PullFormFromAggregate.java:106)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.lambda$static$0(PullFormFromAggregate.java:56)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+Caused by: org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Eggs47a
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:59)
+	... 11 common frames omitted
+2019-06-11 16:19:35,540 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:19:39,041 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:39,057 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:39,203 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_11007729822575804990_form.xml
+2019-06-11 16:19:39,203 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat
+2019-06-11 16:19:39,260 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.615 ms
+2019-06-11 16:19:39,261 [main] INFO  XFormParser - Consolidating text finished in 0.824 ms
+2019-06-11 16:19:39,261 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:39,262 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:19:39,310 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 48.247 ms
+2019-06-11 16:19:39,312 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.385 ms
+2019-06-11 16:19:39,312 [main] INFO  XFormParser - Consolidating text finished in 0.103 ms
+2019-06-11 16:19:39,312 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:39,312 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:19:39,315 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.782 ms
+2019-06-11 16:19:39,716 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:39,718 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:39,767 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Dateformat
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:62)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.pullFormFromAggregate(PullFormFromAggregate.java:106)
+	at org.opendatakit.briefcase.operations.PullFormFromAggregate.lambda$static$0(PullFormFromAggregate.java:56)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+Caused by: org.opendatakit.briefcase.util.PullFromServerException: Failure pulling forms from server. FormIds: Dateformat
+	at org.opendatakit.briefcase.util.TransferFromServer.pull(TransferFromServer.java:59)
+	... 11 common frames omitted
+2019-06-11 16:19:42,507 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:19:48,422 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:48,436 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:48,542 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_4771133860837680498_form.xml
+2019-06-11 16:19:48,542 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a
+2019-06-11 16:19:48,604 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.811 ms
+2019-06-11 16:19:48,605 [main] INFO  XFormParser - Consolidating text finished in 0.943 ms
+2019-06-11 16:19:48,605 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:48,605 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:19:48,622 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 16.726 ms
+2019-06-11 16:19:48,625 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.659 ms
+2019-06-11 16:19:48,625 [main] INFO  XFormParser - Consolidating text finished in 0.241 ms
+2019-06-11 16:19:48,625 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:48,625 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:19:48,628 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.778 ms
+2019-06-11 16:19:48,986 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:48,989 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:49,032 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:49,034 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:52,235 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:19:55,383 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:55,396 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:19:55,553 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_16138799873713763322_form.xml
+2019-06-11 16:19:55,553 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat
+2019-06-11 16:19:55,618 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.661 ms
+2019-06-11 16:19:55,619 [main] INFO  XFormParser - Consolidating text finished in 0.768 ms
+2019-06-11 16:19:55,619 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:55,619 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:19:55,667 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 47.736 ms
+2019-06-11 16:19:55,669 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.449 ms
+2019-06-11 16:19:55,669 [main] INFO  XFormParser - Consolidating text finished in 0.115 ms
+2019-06-11 16:19:55,669 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:19:55,669 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:19:55,672 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.729 ms
+2019-06-11 16:19:56,056 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:56,058 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:56,114 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:56,115 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:19:56,126 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:19:56,126 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:19:56,128 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:19:56,128 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:19:56,254 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c4343166-06d4-45fb-9638-e33493064c50
+2019-06-11 16:19:56,254 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:316f1c55-d1e3-4012-9e82-fe012e6908ce
+2019-06-11 16:20:05,720 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:21:22,894 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:21:22,911 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:21:23,068 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_16147248558055325907_form.xml
+2019-06-11 16:21:23,068 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a
+2019-06-11 16:21:23,133 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.836 ms
+2019-06-11 16:21:23,134 [main] INFO  XFormParser - Consolidating text finished in 0.930 ms
+2019-06-11 16:21:23,134 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:21:23,134 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:21:23,152 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 17.502 ms
+2019-06-11 16:21:23,154 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.515 ms
+2019-06-11 16:21:23,155 [main] INFO  XFormParser - Consolidating text finished in 0.214 ms
+2019-06-11 16:21:23,155 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:21:23,155 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:21:23,158 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 3.190 ms
+2019-06-11 16:21:23,551 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:21:23,553 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:21:23,598 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:21:23,599 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:21:28,845 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:21:32,037 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:21:32,054 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:21:32,185 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_18148828789311739007_form.xml
+2019-06-11 16:21:32,185 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat
+2019-06-11 16:21:32,255 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.655 ms
+2019-06-11 16:21:32,257 [main] INFO  XFormParser - Consolidating text finished in 1.145 ms
+2019-06-11 16:21:32,257 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:21:32,258 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:21:32,319 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 61.394 ms
+2019-06-11 16:21:32,321 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.459 ms
+2019-06-11 16:21:32,322 [main] INFO  XFormParser - Consolidating text finished in 0.114 ms
+2019-06-11 16:21:32,322 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:21:32,322 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:21:32,324 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.386 ms
+2019-06-11 16:21:32,721 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:21:32,723 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:21:32,786 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:21:32,788 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:21:32,799 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:21:32,799 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:21:32,801 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:21:32,801 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:21:32,884 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:316f1c55-d1e3-4012-9e82-fe012e6908ce
+2019-06-11 16:21:32,919 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c4343166-06d4-45fb-9638-e33493064c50
+2019-06-11 16:21:36,028 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:22:36,139 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:22:36,162 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:22:36,318 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_15624838475301514691_form.xml
+2019-06-11 16:22:36,319 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a
+2019-06-11 16:22:36,407 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 1.055 ms
+2019-06-11 16:22:36,409 [main] INFO  XFormParser - Consolidating text finished in 1.552 ms
+2019-06-11 16:22:36,409 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:22:36,409 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:22:36,426 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 16.753 ms
+2019-06-11 16:22:36,428 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.624 ms
+2019-06-11 16:22:36,429 [main] INFO  XFormParser - Consolidating text finished in 0.217 ms
+2019-06-11 16:22:36,429 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:22:36,429 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:22:36,433 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 3.593 ms
+2019-06-11 16:22:36,810 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:22:36,813 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:22:36,867 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:22:36,868 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:22:40,239 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:22:43,329 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:22:43,345 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:22:43,495 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_7810207807180762879_form.xml
+2019-06-11 16:22:43,495 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat
+2019-06-11 16:22:43,554 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.614 ms
+2019-06-11 16:22:43,555 [main] INFO  XFormParser - Consolidating text finished in 0.836 ms
+2019-06-11 16:22:43,555 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:22:43,555 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:22:43,605 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 49.745 ms
+2019-06-11 16:22:43,607 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.410 ms
+2019-06-11 16:22:43,607 [main] INFO  XFormParser - Consolidating text finished in 0.096 ms
+2019-06-11 16:22:43,607 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:22:43,607 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:22:43,610 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.036 ms
+2019-06-11 16:22:43,988 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:22:43,990 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:22:44,034 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:22:44,037 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:22:44,050 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:22:44,050 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:22:44,052 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:22:44,052 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:22:44,182 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c4343166-06d4-45fb-9638-e33493064c50
+2019-06-11 16:22:44,182 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:316f1c55-d1e3-4012-9e82-fe012e6908ce
+2019-06-11 16:22:47,454 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:23:32,737 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:23:32,752 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:23:32,880 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_3629097934569142490_form.xml
+2019-06-11 16:23:32,880 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a
+2019-06-11 16:23:32,936 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.810 ms
+2019-06-11 16:23:32,937 [main] INFO  XFormParser - Consolidating text finished in 0.804 ms
+2019-06-11 16:23:32,937 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:23:32,937 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:23:32,954 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 17.221 ms
+2019-06-11 16:23:32,956 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.449 ms
+2019-06-11 16:23:32,956 [main] INFO  XFormParser - Consolidating text finished in 0.237 ms
+2019-06-11 16:23:32,956 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:23:32,957 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:23:32,959 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.606 ms
+2019-06-11 16:23:33,324 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:23:33,326 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:23:33,371 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:23:33,373 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:23:36,520 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:23:39,539 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:23:39,552 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:23:39,698 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_13406993512992724986_form.xml
+2019-06-11 16:23:39,698 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat
+2019-06-11 16:23:39,759 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.647 ms
+2019-06-11 16:23:39,760 [main] INFO  XFormParser - Consolidating text finished in 0.827 ms
+2019-06-11 16:23:39,760 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:23:39,760 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:23:39,814 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 53.759 ms
+2019-06-11 16:23:39,816 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.469 ms
+2019-06-11 16:23:39,817 [main] INFO  XFormParser - Consolidating text finished in 0.110 ms
+2019-06-11 16:23:39,817 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:23:39,817 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:23:39,819 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.317 ms
+2019-06-11 16:23:40,215 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:23:40,218 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:23:40,264 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:23:40,266 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:23:40,284 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:23:40,285 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:23:40,286 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:23:40,288 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:23:40,410 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:316f1c55-d1e3-4012-9e82-fe012e6908ce
+2019-06-11 16:23:40,416 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c4343166-06d4-45fb-9638-e33493064c50
+2019-06-11 16:23:43,630 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:26:00,942 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:26:00,959 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:26:01,115 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_13622219643336679645_form.xml
+2019-06-11 16:26:01,116 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a
+2019-06-11 16:26:01,177 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 1.465 ms
+2019-06-11 16:26:01,179 [main] INFO  XFormParser - Consolidating text finished in 1.195 ms
+2019-06-11 16:26:01,179 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:26:01,180 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:26:01,202 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 22.068 ms
+2019-06-11 16:26:01,204 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.956 ms
+2019-06-11 16:26:01,205 [main] INFO  XFormParser - Consolidating text finished in 0.359 ms
+2019-06-11 16:26:01,205 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:26:01,205 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:26:01,210 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 4.453 ms
+2019-06-11 16:26:01,690 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E1970-01-01T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:26:01,692 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E1970-01-01T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:26:01,743 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-04-14T17%3A37%3A39.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3Ab1f489be-1f40-42ec-a957-8c7aff8547e0%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:26:01,745 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-04-14T17%3A37%3A39.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3Ab1f489be-1f40-42ec-a957-8c7aff8547e0%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:26:01,765 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac6e7ae6e-60ec-4580-a420-f00144a9cf84%5D
+2019-06-11 16:26:01,765 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Af947fad2-8fde-4ac9-b67f-655299552488%5D
+2019-06-11 16:26:01,767 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac6e7ae6e-60ec-4580-a420-f00144a9cf84%5D
+2019-06-11 16:26:01,767 [briefcase-pull-1-thread-24] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A47f13715-bcc6-4e11-9cfe-465cecd13b31%5D
+2019-06-11 16:26:01,768 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Af947fad2-8fde-4ac9-b67f-655299552488%5D
+2019-06-11 16:26:01,768 [briefcase-pull-1-thread-24] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A47f13715-bcc6-4e11-9cfe-465cecd13b31%5D
+2019-06-11 16:26:01,769 [briefcase-pull-1-thread-23] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac0e28660-de03-47e5-9e9a-4286401a4f8c%5D
+2019-06-11 16:26:01,770 [briefcase-pull-1-thread-22] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ad48d3d3d-35e5-42f5-b88b-8f9a4769ba9d%5D
+2019-06-11 16:26:01,772 [briefcase-pull-1-thread-22] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ad48d3d3d-35e5-42f5-b88b-8f9a4769ba9d%5D
+2019-06-11 16:26:01,770 [briefcase-pull-1-thread-23] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac0e28660-de03-47e5-9e9a-4286401a4f8c%5D
+2019-06-11 16:26:01,772 [briefcase-pull-1-thread-21] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac10cfc60-b21d-4d23-8ccc-b11fbbe5ddaf%5D
+2019-06-11 16:26:01,773 [briefcase-pull-1-thread-21] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac10cfc60-b21d-4d23-8ccc-b11fbbe5ddaf%5D
+2019-06-11 16:26:01,774 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A45fbef8a-ce0d-441e-8f3d-bf8024de551f%5D
+2019-06-11 16:26:01,776 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A45fbef8a-ce0d-441e-8f3d-bf8024de551f%5D
+2019-06-11 16:26:01,777 [briefcase-pull-1-thread-19] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afa83d945-55e5-4f14-8c98-c545da4470c8%5D
+2019-06-11 16:26:01,778 [briefcase-pull-1-thread-18] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A4db0c131-bcfd-4036-b326-b291a11cab75%5D
+2019-06-11 16:26:01,778 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac236d044-4245-45c4-ac21-30a02e365e7c%5D
+2019-06-11 16:26:01,778 [briefcase-pull-1-thread-19] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afa83d945-55e5-4f14-8c98-c545da4470c8%5D
+2019-06-11 16:26:01,779 [briefcase-pull-1-thread-18] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A4db0c131-bcfd-4036-b326-b291a11cab75%5D
+2019-06-11 16:26:01,779 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac236d044-4245-45c4-ac21-30a02e365e7c%5D
+2019-06-11 16:26:01,780 [briefcase-pull-1-thread-16] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A747721d0-c896-4f06-a759-ad09c56340e1%5D
+2019-06-11 16:26:01,781 [briefcase-pull-1-thread-15] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ab979b379-edc8-402f-a3b4-fa6a6c22c25b%5D
+2019-06-11 16:26:01,782 [briefcase-pull-1-thread-16] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A747721d0-c896-4f06-a759-ad09c56340e1%5D
+2019-06-11 16:26:01,782 [briefcase-pull-1-thread-15] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ab979b379-edc8-402f-a3b4-fa6a6c22c25b%5D
+2019-06-11 16:26:01,790 [briefcase-pull-1-thread-14] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A8692ca35-234b-4ea5-86f6-2a6eecf7dfff%5D
+2019-06-11 16:26:01,790 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A7d217585-e24f-4181-bc37-8741cff5f10b%5D
+2019-06-11 16:26:01,792 [briefcase-pull-1-thread-14] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A8692ca35-234b-4ea5-86f6-2a6eecf7dfff%5D
+2019-06-11 16:26:01,794 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A7d217585-e24f-4181-bc37-8741cff5f10b%5D
+2019-06-11 16:26:01,795 [briefcase-pull-1-thread-11] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Abe646700-c854-4237-b723-068418fe3157%5D
+2019-06-11 16:26:01,793 [briefcase-pull-1-thread-12] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A35d843e0-2eaa-4231-beb0-d84919ad6459%5D
+2019-06-11 16:26:01,797 [briefcase-pull-1-thread-8] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Aab9009d6-a748-4f52-93df-06ccd34a117e%5D
+2019-06-11 16:26:01,797 [briefcase-pull-1-thread-12] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A35d843e0-2eaa-4231-beb0-d84919ad6459%5D
+2019-06-11 16:26:01,798 [briefcase-pull-1-thread-8] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Aab9009d6-a748-4f52-93df-06ccd34a117e%5D
+2019-06-11 16:26:01,798 [briefcase-pull-1-thread-11] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Abe646700-c854-4237-b723-068418fe3157%5D
+2019-06-11 16:26:01,800 [briefcase-pull-1-thread-10] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A8b871165-3336-44ce-9676-6168afff170e%5D
+2019-06-11 16:26:01,801 [briefcase-pull-1-thread-10] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A8b871165-3336-44ce-9676-6168afff170e%5D
+2019-06-11 16:26:01,803 [briefcase-pull-1-thread-9] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A5011d69c-374f-487e-b6cb-6d33390007e1%5D
+2019-06-11 16:26:01,804 [briefcase-pull-1-thread-9] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A5011d69c-374f-487e-b6cb-6d33390007e1%5D
+2019-06-11 16:26:01,804 [briefcase-pull-1-thread-7] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Af75e34a2-3eb8-46eb-895c-cdc362dfe117%5D
+2019-06-11 16:26:01,805 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A054dda65-db25-4cba-99e6-8f06386d77f7%5D
+2019-06-11 16:26:01,806 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ab7c0aeb1-2b48-4196-b5e4-9def3469673e%5D
+2019-06-11 16:26:01,806 [briefcase-pull-1-thread-7] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Af75e34a2-3eb8-46eb-895c-cdc362dfe117%5D
+2019-06-11 16:26:01,807 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A054dda65-db25-4cba-99e6-8f06386d77f7%5D
+2019-06-11 16:26:01,807 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ab7c0aeb1-2b48-4196-b5e4-9def3469673e%5D
+2019-06-11 16:26:01,808 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A75a57653-ee25-45da-962e-eccdd45be1cf%5D
+2019-06-11 16:26:01,810 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A75a57653-ee25-45da-962e-eccdd45be1cf%5D
+2019-06-11 16:26:01,811 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A33bcc930-2b46-42a8-8da0-5d96650758f8%5D
+2019-06-11 16:26:01,819 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A33bcc930-2b46-42a8-8da0-5d96650758f8%5D
+2019-06-11 16:26:01,832 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:45fbef8a-ce0d-441e-8f3d-bf8024de551f
+2019-06-11 16:26:01,868 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A481314df-880a-4477-b072-693c81e049ed%5D
+2019-06-11 16:26:01,872 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A481314df-880a-4477-b072-693c81e049ed%5D
+2019-06-11 16:26:01,877 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:75a57653-ee25-45da-962e-eccdd45be1cf
+2019-06-11 16:26:01,880 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ab7468c93-4ab0-4021-99de-807b839e867c%5D
+2019-06-11 16:26:01,881 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ab7468c93-4ab0-4021-99de-807b839e867c%5D
+2019-06-11 16:26:01,909 [briefcase-pull-1-thread-9] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:5011d69c-374f-487e-b6cb-6d33390007e1
+2019-06-11 16:26:01,912 [briefcase-pull-1-thread-19] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:fa83d945-55e5-4f14-8c98-c545da4470c8
+2019-06-11 16:26:01,914 [briefcase-pull-1-thread-9] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A229880b7-cce6-4a3f-886f-63da08066853%5D
+2019-06-11 16:26:01,916 [briefcase-pull-1-thread-9] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A229880b7-cce6-4a3f-886f-63da08066853%5D
+2019-06-11 16:26:01,916 [briefcase-pull-1-thread-19] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ace4ab5bb-7b57-4397-be51-fc5aa19abb66%5D
+2019-06-11 16:26:01,917 [briefcase-pull-1-thread-19] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ace4ab5bb-7b57-4397-be51-fc5aa19abb66%5D
+2019-06-11 16:26:01,920 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:7d217585-e24f-4181-bc37-8741cff5f10b
+2019-06-11 16:26:01,923 [briefcase-pull-1-thread-22] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:d48d3d3d-35e5-42f5-b88b-8f9a4769ba9d
+2019-06-11 16:26:01,923 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Af9435267-a56c-4994-97b0-dd5ff2514fc5%5D
+2019-06-11 16:26:01,925 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Af9435267-a56c-4994-97b0-dd5ff2514fc5%5D
+2019-06-11 16:26:01,925 [briefcase-pull-1-thread-22] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ab6c31ed2-6f05-49de-b29f-d5b3578916ae%5D
+2019-06-11 16:26:01,926 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:33bcc930-2b46-42a8-8da0-5d96650758f8
+2019-06-11 16:26:01,926 [briefcase-pull-1-thread-22] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ab6c31ed2-6f05-49de-b29f-d5b3578916ae%5D
+2019-06-11 16:26:01,928 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A878ee994-e579-4f31-9091-38da2be2ac2e%5D
+2019-06-11 16:26:01,929 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A878ee994-e579-4f31-9091-38da2be2ac2e%5D
+2019-06-11 16:26:01,934 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:481314df-880a-4477-b072-693c81e049ed
+2019-06-11 16:26:01,936 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Abc4b2c03-4466-4159-8828-c38e092b6cbe%5D
+2019-06-11 16:26:01,937 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Abc4b2c03-4466-4159-8828-c38e092b6cbe%5D
+2019-06-11 16:26:01,938 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:b7c0aeb1-2b48-4196-b5e4-9def3469673e
+2019-06-11 16:26:01,940 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A72dfdb22-daae-4f76-9a32-63e8a899c637%5D
+2019-06-11 16:26:01,941 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A72dfdb22-daae-4f76-9a32-63e8a899c637%5D
+2019-06-11 16:26:01,945 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:b7468c93-4ab0-4021-99de-807b839e867c
+2019-06-11 16:26:01,945 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:f947fad2-8fde-4ac9-b67f-655299552488
+2019-06-11 16:26:01,950 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c236d044-4245-45c4-ac21-30a02e365e7c
+2019-06-11 16:26:01,953 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A009f1d65-d558-46e5-8f84-019c237c0901%5D
+2019-06-11 16:26:01,955 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ae4116fe6-49de-4e42-a42c-354606fc5892%5D
+2019-06-11 16:26:01,955 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A009f1d65-d558-46e5-8f84-019c237c0901%5D
+2019-06-11 16:26:01,955 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A29a44fbd-7459-4306-954b-18faaf746ad3%5D
+2019-06-11 16:26:01,956 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ae4116fe6-49de-4e42-a42c-354606fc5892%5D
+2019-06-11 16:26:01,956 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A29a44fbd-7459-4306-954b-18faaf746ad3%5D
+2019-06-11 16:26:01,956 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:054dda65-db25-4cba-99e6-8f06386d77f7
+2019-06-11 16:26:01,957 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:f9435267-a56c-4994-97b0-dd5ff2514fc5
+2019-06-11 16:26:01,958 [briefcase-pull-1-thread-19] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:ce4ab5bb-7b57-4397-be51-fc5aa19abb66
+2019-06-11 16:26:01,958 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A5fdfe2f7-2c33-4f07-9753-29170097258a%5D
+2019-06-11 16:26:01,959 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A5fdfe2f7-2c33-4f07-9753-29170097258a%5D
+2019-06-11 16:26:01,960 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Abda70b36-96e0-4bf1-954b-bdda5fd6f480%5D
+2019-06-11 16:26:01,961 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c6e7ae6e-60ec-4580-a420-f00144a9cf84
+2019-06-11 16:26:01,961 [briefcase-pull-1-thread-19] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afb4cfa90-1f6f-40d8-9f95-676caf9c152c%5D
+2019-06-11 16:26:01,965 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Abda70b36-96e0-4bf1-954b-bdda5fd6f480%5D
+2019-06-11 16:26:01,966 [briefcase-pull-1-thread-19] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afb4cfa90-1f6f-40d8-9f95-676caf9c152c%5D
+2019-06-11 16:26:01,966 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A20fb57ef-55b5-415a-8464-7ea354a5255d%5D
+2019-06-11 16:26:01,967 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A20fb57ef-55b5-415a-8464-7ea354a5255d%5D
+2019-06-11 16:26:01,968 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:878ee994-e579-4f31-9091-38da2be2ac2e
+2019-06-11 16:26:01,970 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A241105c5-30a0-46cd-ba91-2334d5fe9399%5D
+2019-06-11 16:26:01,971 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A241105c5-30a0-46cd-ba91-2334d5fe9399%5D
+2019-06-11 16:26:01,973 [briefcase-pull-1-thread-23] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c0e28660-de03-47e5-9e9a-4286401a4f8c
+2019-06-11 16:26:01,976 [briefcase-pull-1-thread-23] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A01ee1a85-b92d-469a-b0f5-57ce1d3b807d%5D
+2019-06-11 16:26:01,977 [briefcase-pull-1-thread-23] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A01ee1a85-b92d-469a-b0f5-57ce1d3b807d%5D
+2019-06-11 16:26:01,978 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:009f1d65-d558-46e5-8f84-019c237c0901
+2019-06-11 16:26:01,979 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:29a44fbd-7459-4306-954b-18faaf746ad3
+2019-06-11 16:26:01,981 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ae4d127ce-4b0e-4933-9320-600af12a2a54%5D
+2019-06-11 16:26:01,981 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afff1dc76-e1a9-466e-a77f-bbb953322a1d%5D
+2019-06-11 16:26:01,982 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ae4d127ce-4b0e-4933-9320-600af12a2a54%5D
+2019-06-11 16:26:01,982 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afff1dc76-e1a9-466e-a77f-bbb953322a1d%5D
+2019-06-11 16:26:01,988 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:5fdfe2f7-2c33-4f07-9753-29170097258a
+2019-06-11 16:26:01,988 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:bda70b36-96e0-4bf1-954b-bdda5fd6f480
+2019-06-11 16:26:01,990 [briefcase-pull-1-thread-9] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:229880b7-cce6-4a3f-886f-63da08066853
+2019-06-11 16:26:01,990 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A99fd3b18-f45d-4e84-b01f-6ddf910baba1%5D
+2019-06-11 16:26:01,990 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac4fe1780-5ef7-475f-bb4d-e5c355d37d28%5D
+2019-06-11 16:26:01,991 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A99fd3b18-f45d-4e84-b01f-6ddf910baba1%5D
+2019-06-11 16:26:01,991 [briefcase-pull-1-thread-9] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A6e0edfb6-3034-4914-8380-287a91645d2c%5D
+2019-06-11 16:26:01,992 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac4fe1780-5ef7-475f-bb4d-e5c355d37d28%5D
+2019-06-11 16:26:01,992 [briefcase-pull-1-thread-9] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A6e0edfb6-3034-4914-8380-287a91645d2c%5D
+2019-06-11 16:26:02,008 [briefcase-pull-1-thread-11] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:be646700-c854-4237-b723-068418fe3157
+2019-06-11 16:26:02,009 [briefcase-pull-1-thread-16] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:747721d0-c896-4f06-a759-ad09c56340e1
+2019-06-11 16:26:02,009 [briefcase-pull-1-thread-23] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:01ee1a85-b92d-469a-b0f5-57ce1d3b807d
+2019-06-11 16:26:02,010 [briefcase-pull-1-thread-11] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A824a280d-fcbe-4215-8a54-7cd75dc0d6f2%5D
+2019-06-11 16:26:02,011 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:bc4b2c03-4466-4159-8828-c38e092b6cbe
+2019-06-11 16:26:02,011 [briefcase-pull-1-thread-22] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:b6c31ed2-6f05-49de-b29f-d5b3578916ae
+2019-06-11 16:26:02,012 [briefcase-pull-1-thread-11] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A824a280d-fcbe-4215-8a54-7cd75dc0d6f2%5D
+2019-06-11 16:26:02,012 [briefcase-pull-1-thread-23] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac8c17084-ba57-441b-ba9e-1886cbca9243%5D
+2019-06-11 16:26:02,013 [briefcase-pull-1-thread-16] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afa1f4c7d-9040-4aa2-b3cf-59b5f57d3148%5D
+2019-06-11 16:26:02,013 [briefcase-pull-1-thread-23] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac8c17084-ba57-441b-ba9e-1886cbca9243%5D
+2019-06-11 16:26:02,013 [briefcase-pull-1-thread-16] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afa1f4c7d-9040-4aa2-b3cf-59b5f57d3148%5D
+2019-06-11 16:26:02,014 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:e4d127ce-4b0e-4933-9320-600af12a2a54
+2019-06-11 16:26:02,014 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:20fb57ef-55b5-415a-8464-7ea354a5255d
+2019-06-11 16:26:02,016 [briefcase-pull-1-thread-24] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:47f13715-bcc6-4e11-9cfe-465cecd13b31
+2019-06-11 16:26:02,017 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:72dfdb22-daae-4f76-9a32-63e8a899c637
+2019-06-11 16:26:02,017 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A0837e0f9-b702-4fdf-af76-083d81e1e69f%5D
+2019-06-11 16:26:02,017 [briefcase-pull-1-thread-12] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:35d843e0-2eaa-4231-beb0-d84919ad6459
+2019-06-11 16:26:02,018 [briefcase-pull-1-thread-10] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:8b871165-3336-44ce-9676-6168afff170e
+2019-06-11 16:26:02,018 [briefcase-pull-1-thread-8] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:ab9009d6-a748-4f52-93df-06ccd34a117e
+2019-06-11 16:26:02,018 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A0837e0f9-b702-4fdf-af76-083d81e1e69f%5D
+2019-06-11 16:26:02,019 [briefcase-pull-1-thread-21] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c10cfc60-b21d-4d23-8ccc-b11fbbe5ddaf
+2019-06-11 16:26:02,023 [briefcase-pull-1-thread-21] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A329971a7-3ef2-4bd9-81e1-dd6cfdc87f6d%5D
+2019-06-11 16:26:02,023 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:241105c5-30a0-46cd-ba91-2334d5fe9399
+2019-06-11 16:26:02,025 [briefcase-pull-1-thread-21] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A329971a7-3ef2-4bd9-81e1-dd6cfdc87f6d%5D
+2019-06-11 16:26:02,025 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:e4116fe6-49de-4e42-a42c-354606fc5892
+2019-06-11 16:26:02,026 [briefcase-pull-1-thread-11] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:824a280d-fcbe-4215-8a54-7cd75dc0d6f2
+2019-06-11 16:26:02,026 [briefcase-pull-1-thread-24] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afb8afe5f-b51e-48c7-bfa8-245dcd8abb8e%5D
+2019-06-11 16:26:02,025 [briefcase-pull-1-thread-22] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A74e3883c-1646-42bf-b37e-3e4cebc5ef96%5D
+2019-06-11 16:26:02,028 [briefcase-pull-1-thread-24] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afb8afe5f-b51e-48c7-bfa8-245dcd8abb8e%5D
+2019-06-11 16:26:02,029 [briefcase-pull-1-thread-22] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A74e3883c-1646-42bf-b37e-3e4cebc5ef96%5D
+2019-06-11 16:26:02,029 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:fff1dc76-e1a9-466e-a77f-bbb953322a1d
+2019-06-11 16:26:02,030 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A8366819b-8793-48d4-ae73-22041a652caa%5D
+2019-06-11 16:26:02,031 [briefcase-pull-1-thread-15] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:b979b379-edc8-402f-a3b4-fa6a6c22c25b
+2019-06-11 16:26:02,031 [briefcase-pull-1-thread-12] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ae937072c-5245-4835-af44-5f59352a4b57%5D
+2019-06-11 16:26:02,032 [briefcase-pull-1-thread-23] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c8c17084-ba57-441b-ba9e-1886cbca9243
+2019-06-11 16:26:02,032 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A8366819b-8793-48d4-ae73-22041a652caa%5D
+2019-06-11 16:26:02,032 [briefcase-pull-1-thread-12] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ae937072c-5245-4835-af44-5f59352a4b57%5D
+2019-06-11 16:26:02,033 [briefcase-pull-1-thread-10] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A3780142a-8d5c-494f-9950-5b4efc0f5e35%5D
+2019-06-11 16:26:02,029 [briefcase-pull-1-thread-19] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:fb4cfa90-1f6f-40d8-9f95-676caf9c152c
+2019-06-11 16:26:02,037 [briefcase-pull-1-thread-13] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c4fe1780-5ef7-475f-bb4d-e5c355d37d28
+2019-06-11 16:26:02,038 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:99fd3b18-f45d-4e84-b01f-6ddf910baba1
+2019-06-11 16:26:02,038 [briefcase-pull-1-thread-16] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:fa1f4c7d-9040-4aa2-b3cf-59b5f57d3148
+2019-06-11 16:26:02,038 [briefcase-pull-1-thread-14] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:8692ca35-234b-4ea5-86f6-2a6eecf7dfff
+2019-06-11 16:26:02,039 [briefcase-pull-1-thread-9] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:6e0edfb6-3034-4914-8380-287a91645d2c
+2019-06-11 16:26:02,040 [briefcase-pull-1-thread-10] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A3780142a-8d5c-494f-9950-5b4efc0f5e35%5D
+2019-06-11 16:26:02,041 [briefcase-pull-1-thread-8] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ae4307dbe-6d27-484d-901f-5359fd7a4646%5D
+2019-06-11 16:26:02,041 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A43c8bab4-68e2-4848-a697-835f630ead5e%5D
+2019-06-11 16:26:02,042 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ab1f489be-1f40-42ec-a957-8c7aff8547e0%5D
+2019-06-11 16:26:02,042 [briefcase-pull-1-thread-8] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ae4307dbe-6d27-484d-901f-5359fd7a4646%5D
+2019-06-11 16:26:02,042 [briefcase-pull-1-thread-11] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A38c5455f-9488-4933-8a1d-56d9975d1c75%5D
+2019-06-11 16:26:02,043 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ab1f489be-1f40-42ec-a957-8c7aff8547e0%5D
+2019-06-11 16:26:02,043 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A43c8bab4-68e2-4848-a697-835f630ead5e%5D
+2019-06-11 16:26:02,043 [briefcase-pull-1-thread-11] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A38c5455f-9488-4933-8a1d-56d9975d1c75%5D
+2019-06-11 16:26:02,043 [briefcase-pull-1-thread-7] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:f75e34a2-3eb8-46eb-895c-cdc362dfe117
+2019-06-11 16:26:02,043 [briefcase-pull-1-thread-18] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:4db0c131-bcfd-4036-b326-b291a11cab75
+2019-06-11 16:26:02,043 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A2ac062ff-1d14-416d-83e0-52a360f905be%5D
+2019-06-11 16:26:02,044 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:0837e0f9-b702-4fdf-af76-083d81e1e69f
+2019-06-11 16:26:02,044 [briefcase-pull-1-thread-21] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:329971a7-3ef2-4bd9-81e1-dd6cfdc87f6d
+2019-06-11 16:26:02,044 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afd6282ea-6400-4c86-844d-93f54b642bb4%5D
+2019-06-11 16:26:02,047 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Afd6282ea-6400-4c86-844d-93f54b642bb4%5D
+2019-06-11 16:26:02,047 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A2ac062ff-1d14-416d-83e0-52a360f905be%5D
+2019-06-11 16:26:02,048 [briefcase-pull-1-thread-24] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:fb8afe5f-b51e-48c7-bfa8-245dcd8abb8e
+2019-06-11 16:26:02,048 [briefcase-pull-1-thread-12] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:e937072c-5245-4835-af44-5f59352a4b57
+2019-06-11 16:26:02,052 [briefcase-pull-1-thread-15] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac5344bd2-ae75-493d-a784-8eb4fa008717%5D
+2019-06-11 16:26:02,052 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A38e7d1cb-7b8d-4cc0-aac4-8980b5333df7%5D
+2019-06-11 16:26:02,053 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3A38e7d1cb-7b8d-4cc0-aac4-8980b5333df7%5D
+2019-06-11 16:26:02,053 [briefcase-pull-1-thread-15] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Eggs47a%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FEggs47a%5B%40key%3Duuid%3Ac5344bd2-ae75-493d-a784-8eb4fa008717%5D
+2019-06-11 16:26:02,058 [briefcase-pull-1-thread-10] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:3780142a-8d5c-494f-9950-5b4efc0f5e35
+2019-06-11 16:26:02,058 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:8366819b-8793-48d4-ae73-22041a652caa
+2019-06-11 16:26:02,058 [briefcase-pull-1-thread-22] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:74e3883c-1646-42bf-b37e-3e4cebc5ef96
+2019-06-11 16:26:02,060 [briefcase-pull-1-thread-8] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:e4307dbe-6d27-484d-901f-5359fd7a4646
+2019-06-11 16:26:02,061 [briefcase-pull-1-thread-11] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:38c5455f-9488-4933-8a1d-56d9975d1c75
+2019-06-11 16:26:02,062 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:fd6282ea-6400-4c86-844d-93f54b642bb4
+2019-06-11 16:26:02,064 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:b1f489be-1f40-42ec-a957-8c7aff8547e0
+2019-06-11 16:26:02,065 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:2ac062ff-1d14-416d-83e0-52a360f905be
+2019-06-11 16:26:02,065 [briefcase-pull-1-thread-20] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:43c8bab4-68e2-4848-a697-835f630ead5e
+2019-06-11 16:26:02,069 [briefcase-pull-1-thread-17] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:38e7d1cb-7b8d-4cc0-aac4-8980b5333df7
+2019-06-11 16:26:02,070 [briefcase-pull-1-thread-15] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c5344bd2-ae75-493d-a784-8eb4fa008717
+2019-06-11 16:26:05,741 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 5.984 ms
+2019-06-11 16:26:05,745 [main] INFO  XFormParser - Consolidating text finished in 1.464 ms
+2019-06-11 16:26:05,745 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:26:05,746 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:26:05,769 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 23.477 ms
+2019-06-11 16:26:05,786 [AWT-EventQueue-0] INFO  o.o.briefcase.operations.Export - Export has started
+2019-06-11 16:26:06,068 [main] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:00.28313363
+2019-06-11 16:26:10,354 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:26:10,373 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:26:10,498 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_11458847625366512663_form.xml
+2019-06-11 16:26:10,498 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat
+2019-06-11 16:26:10,562 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.729 ms
+2019-06-11 16:26:10,563 [main] INFO  XFormParser - Consolidating text finished in 0.974 ms
+2019-06-11 16:26:10,563 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:26:10,564 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:26:10,625 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 61.155 ms
+2019-06-11 16:26:10,628 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.677 ms
+2019-06-11 16:26:10,628 [main] INFO  XFormParser - Consolidating text finished in 0.123 ms
+2019-06-11 16:26:10,629 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:26:10,629 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:26:10,632 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 3.058 ms
+2019-06-11 16:26:11,079 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E1970-01-01T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:26:11,082 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E1970-01-01T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:26:11,129 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:26:11,130 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:26:11,142 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A6112035a-e2e9-4c08-aef9-92bfc7b3ee02%5D
+2019-06-11 16:26:11,142 [briefcase-pull-1-thread-7] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:26:11,143 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:26:11,143 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A0feafcd2-bc22-4412-8aaa-da9e6c305067%5D
+2019-06-11 16:26:11,144 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A5bd11d44-5d99-4f28-97ab-d4cae657969d%5D
+2019-06-11 16:26:11,144 [briefcase-pull-1-thread-7] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:26:11,145 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A5bd11d44-5d99-4f28-97ab-d4cae657969d%5D
+2019-06-11 16:26:11,146 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A6112035a-e2e9-4c08-aef9-92bfc7b3ee02%5D
+2019-06-11 16:26:11,146 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:26:11,146 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A0feafcd2-bc22-4412-8aaa-da9e6c305067%5D
+2019-06-11 16:26:11,235 [briefcase-pull-1-thread-5] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:0feafcd2-bc22-4412-8aaa-da9e6c305067
+2019-06-11 16:26:11,243 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:5bd11d44-5d99-4f28-97ab-d4cae657969d
+2019-06-11 16:26:11,243 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:6112035a-e2e9-4c08-aef9-92bfc7b3ee02
+2019-06-11 16:26:11,274 [briefcase-pull-1-thread-7] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:316f1c55-d1e3-4012-9e82-fe012e6908ce
+2019-06-11 16:26:11,276 [briefcase-pull-1-thread-6] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c4343166-06d4-45fb-9638-e33493064c50
+2019-06-11 16:26:14,944 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 6.027 ms
+2019-06-11 16:26:14,950 [main] INFO  XFormParser - Consolidating text finished in 1.659 ms
+2019-06-11 16:26:14,950 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:26:14,951 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:26:15,030 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 79.378 ms
+2019-06-11 16:26:15,165 [main] INFO  o.o.b.export.ExportProcessTracker - Exported in 00:00:00.116848814
+2019-06-11 16:27:08,651 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:27:08,667 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:27:08,819 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_3018700592965439302_form.xml
+2019-06-11 16:27:08,819 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a
+2019-06-11 16:27:08,885 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.885 ms
+2019-06-11 16:27:08,886 [main] INFO  XFormParser - Consolidating text finished in 0.995 ms
+2019-06-11 16:27:08,886 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:27:08,887 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:27:08,906 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 19.891 ms
+2019-06-11 16:27:08,908 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.484 ms
+2019-06-11 16:27:08,909 [main] INFO  XFormParser - Consolidating text finished in 0.195 ms
+2019-06-11 16:27:08,909 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:27:08,909 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:27:08,912 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 3.032 ms
+2019-06-11 16:27:09,329 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:27:09,333 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:27:09,382 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:27:09,384 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:27:12,552 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:27:16,213 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:27:16,229 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:27:16,350 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_8662569849570044357_form.xml
+2019-06-11 16:27:16,350 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat
+2019-06-11 16:27:16,410 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.608 ms
+2019-06-11 16:27:16,411 [main] INFO  XFormParser - Consolidating text finished in 0.907 ms
+2019-06-11 16:27:16,411 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:27:16,412 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:27:16,469 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 57.666 ms
+2019-06-11 16:27:16,471 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.499 ms
+2019-06-11 16:27:16,472 [main] INFO  XFormParser - Consolidating text finished in 0.101 ms
+2019-06-11 16:27:16,472 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:27:16,472 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:27:16,474 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.451 ms
+2019-06-11 16:27:16,920 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:27:16,923 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:27:16,965 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:27:16,967 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:27:16,977 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:27:16,978 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:27:16,979 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:27:16,979 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:27:17,064 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c4343166-06d4-45fb-9638-e33493064c50
+2019-06-11 16:27:17,095 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:316f1c55-d1e3-4012-9e82-fe012e6908ce
+2019-06-11 16:27:20,156 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:28:06,522 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:28:06,537 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:28:06,649 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_8293598682125776828_form.xml
+2019-06-11 16:28:06,649 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Eggs47a
+2019-06-11 16:28:06,712 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.868 ms
+2019-06-11 16:28:06,714 [main] INFO  XFormParser - Consolidating text finished in 1.008 ms
+2019-06-11 16:28:06,714 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:28:06,714 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:28:06,736 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 21.982 ms
+2019-06-11 16:28:06,739 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.530 ms
+2019-06-11 16:28:06,739 [main] INFO  XFormParser - Consolidating text finished in 0.214 ms
+2019-06-11 16:28:06,739 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:28:06,739 [main] INFO  XFormParser - Title: "Eggs47a"
+2019-06-11 16:28:06,743 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 3.399 ms
+2019-06-11 16:28:07,140 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:28:07,142 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:28:07,186 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:28:07,187 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Eggs47a&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue+%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:28:10,509 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
+2019-06-11 16:28:13,831 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:28:13,849 [main] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formList
+2019-06-11 16:28:13,991 [main] INFO  o.o.briefcase.util.AggregateUtils - Downloading URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat into /var/folders/tl/t7vndg917ld__swns142v8n80000gn/T/briefcase_10500973726256506806_form.xml
+2019-06-11 16:28:13,991 [main] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001/formXml?formId=Dateformat
+2019-06-11 16:28:14,047 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.730 ms
+2019-06-11 16:28:14,049 [main] INFO  XFormParser - Consolidating text finished in 1.099 ms
+2019-06-11 16:28:14,049 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:28:14,049 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:28:14,109 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 60.158 ms
+2019-06-11 16:28:14,112 [main] INFO  XFormParser - Reading XML and parsing with kXML2 finished in 0.471 ms
+2019-06-11 16:28:14,112 [main] INFO  XFormParser - Consolidating text finished in 0.116 ms
+2019-06-11 16:28:14,112 [main] INFO  XFormParser - Parsing form...
+2019-06-11 16:28:14,112 [main] INFO  XFormParser - Title: "Dateformat"
+2019-06-11 16:28:14,115 [main] INFO  XFormParser - Creating FormDef from parsed XML finished in 2.402 ms
+2019-06-11 16:28:14,489 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:28:14,491 [briefcase-pull-1-thread-1] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T00%3A00%3A00.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%2F%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:28:14,535 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:28:14,537 [briefcase-pull-1-thread-2] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/submissionList?formId=Dateformat&cursor=%3Ccursor+xmlns%3D%22http%3A%2F%2Fwww.opendatakit.org%2Fcursor%22%3E%3CattributeName%3E_LAST_UPDATE_DATE%3C%2FattributeName%3E%3CattributeValue%3E2019-06-11T11%3A35%3A49.000%2B0000%3C%2FattributeValue%3E%3CuriLastReturnedValue%3Euuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%3C%2FuriLastReturnedValue%3E%3CisForwardCursor%3Etrue%3C%2FisForwardCursor%3E%3C%2Fcursor%3E&numEntries=100
+2019-06-11 16:28:14,550 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:28:14,550 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Parsing URL https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:28:14,551 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3A316f1c55-d1e3-4012-9e82-fe012e6908ce%5D
+2019-06-11 16:28:14,551 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.AggregateUtils - Attempting URI https://roberts-beta-001.odk.lshtm.ac.uk/roberts-beta-001//view/downloadSubmission?formId=Dateformat%5B%40version%3Dnull+and+%40uiVersion%3Dnull%5D%2FDate_Options%5B%40key%3Duuid%3Ac4343166-06d4-45fb-9638-e33493064c50%5D
+2019-06-11 16:28:14,674 [briefcase-pull-1-thread-3] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:c4343166-06d4-45fb-9638-e33493064c50
+2019-06-11 16:28:14,674 [briefcase-pull-1-thread-4] INFO  o.o.briefcase.util.ServerFetcher - Fetched instanceID=uuid:316f1c55-d1e3-4012-9e82-fe012e6908ce
+2019-06-11 16:28:17,717 [main] ERROR org.opendatakit.briefcase.Launcher - Error
+java.lang.IllegalArgumentException: The end date can't be before the start date
+	at org.opendatakit.briefcase.export.DateRange.lambda$new$0(DateRange.java:38)
+	at org.opendatakit.briefcase.reused.OptionalProduct$OptionalProduct2$Some.ifPresent(OptionalProduct.java:89)
+	at org.opendatakit.briefcase.export.DateRange.<init>(DateRange.java:36)
+	at org.opendatakit.briefcase.operations.Export.export(Export.java:100)
+	at org.opendatakit.briefcase.operations.Export.lambda$static$2(Export.java:67)
+	at org.opendatakit.common.cli.Cli.lambda$run$4(Cli.java:130)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.opendatakit.common.cli.Cli.run(Cli.java:127)
+	at org.opendatakit.briefcase.Launcher.main(Launcher.java:79)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader.main(JarRsrcLoader.java:58)
