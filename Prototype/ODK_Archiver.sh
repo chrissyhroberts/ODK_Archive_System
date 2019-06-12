@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# requires you to have the server password in top line of a file called serverpass.txt
+	# ODKPASSWORD=12334435dm
+
 #########################################################################################
 ## USER DEFINED VARIABLES
 #########################################################################################
